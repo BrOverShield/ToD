@@ -2,15 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerInput : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
+public class rotator : MonoBehaviour {
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void Update ()
+	{
+		transform.Rotate (new Vector3 (15,30,45) * Time.deltaTime);
 	}
 }
