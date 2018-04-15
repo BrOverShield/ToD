@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 65976375167357066}
   - component: {fileID: 23924413659612574}
   - component: {fileID: 114531295647830064}
+  - component: {fileID: 114162093590493874}
   m_Layer: 0
   m_Name: PickUp
   m_TagString: Pick Up
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1994690906516390}
   m_LocalRotation: {x: 0.46193978, y: 0.19134173, z: 0.19134173, w: 0.84462327}
-  m_LocalPosition: {x: -3.38, y: 0.5, z: 0}
+  m_LocalPosition: {x: 6.561549, y: 0.47178888, z: 1.8076286}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -57,7 +58,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b7a05b17cbb8fd546939ec2c05be37fe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -96,6 +97,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114162093590493874
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1994690906516390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8243ef8d0ec3b6c41b23d04e34ec3676, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mycolorint: 0
+  PresetRed: {r: 0.83823526, g: 0.07396196, b: 0.07396196, a: 0}
+  PresetBlue: {r: 0.24007435, g: 0.16057527, b: 0.66176474, a: 0}
+  PresetGreen: {r: 0.23875433, g: 0.7058823, b: 0.35795242, a: 0}
+  mycolor: {r: 1, g: 1, b: 1, a: 0}
 --- !u!114 &114531295647830064
 MonoBehaviour:
   m_ObjectHideFlags: 1

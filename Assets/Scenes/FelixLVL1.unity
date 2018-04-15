@@ -1817,6 +1817,8 @@ MonoBehaviour:
   ChestPrefab: {fileID: 1679379600189182, guid: f5d57395806cda94ba12437a62b9fb7c,
     type: 2}
   Player: {fileID: 1813215445515670, guid: a80d3d188b7d8dd4eac1f0a7c9142890, type: 2}
+  PickupPrefab: {fileID: 1994690906516390, guid: 9c2f1ef4eb6fdbd4b9c3f4f4e42a5e13,
+    type: 2}
   XSize: 100
   YSize: 100
   ProbOfChestatstart: 10
