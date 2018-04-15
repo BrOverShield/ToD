@@ -29,3 +29,39 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Truth01-wrong.unity
     guid: b5702e577e7fbc34d9e859b6cdc0e2f4
+  - enabled: 1
+    path: Assets/Scenes/Dare02.unity
+    guid: bd448d1b60d60e44d83d74d0754c2736
+  - enabled: 1
+    path: Assets/Scenes/Dare03.unity
+    guid: 86169ca2c2869ca4fabf760a507f8ad9
+  - enabled: 1
+    path: Assets/Scenes/Decision02.unity
+    guid: 389d6bac5a25a8146907823afa7d8aa2
+  - enabled: 1
+    path: Assets/Scenes/Decision03.unity
+    guid: 243ea6df3d5c24b4fa4b94ffbf163963
+  - enabled: 1
+    path: Assets/Scenes/End01.unity
+    guid: 79c5bb348002e324eb81150fda808ba0
+  - enabled: 1
+    path: Assets/Scenes/End02.unity
+    guid: e75911c9140a91b49a482c6fdb9b8f28
+  - enabled: 1
+    path: Assets/Scenes/Truth02.unity
+    guid: 44cc05f5f0e398d45beade8f3184f741
+  - enabled: 1
+    path: Assets/Scenes/Truth02-right.unity
+    guid: 2b07b0a39588fd14bb73a6cde0335590
+  - enabled: 1
+    path: Assets/Scenes/Truth02-wrong.unity
+    guid: cfb0c0710b92b96498915bbfb00c8797
+  - enabled: 1
+    path: Assets/Scenes/Truth03.unity
+    guid: 7ae47f9e8163a5b42bf769ac8e059dd4
+  - enabled: 1
+    path: Assets/Scenes/Truth03-right.unity
+    guid: 528198c2dceaf86499d962a6fb7967a0
+  - enabled: 1
+    path: Assets/Scenes/Truth03-wrong.unity
+    guid: ccd8c651d44185b4ba2b5f6c9585a4fd
