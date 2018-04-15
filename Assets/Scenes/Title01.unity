@@ -286,7 +286,7 @@ GameObject:
   - component: {fileID: 349659093}
   - component: {fileID: 349659096}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Button Help
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -307,8 +307,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -162, y: -129}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -89.854, y: -69}
+  m_SizeDelta: {x: 92.441, y: 18.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &349659093
 MonoBehaviour:
@@ -646,8 +646,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -109, y: 1}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -61, y: -0.7}
+  m_SizeDelta: {x: 93.3, y: 16.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1699577583
 MonoBehaviour:
