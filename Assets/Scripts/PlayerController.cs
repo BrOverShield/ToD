@@ -62,51 +62,13 @@ public class PlayerController : MonoBehaviour
 	}
     void pickit(Collider other)
     {
-        Debug.Log("touche");
-		other.gameObject.SetActive(false);
-
-		if (other.GetComponent<ColorOfPickUp>() != null)
-		{
-			if(other.GetComponent<ColorOfPickUp>().mycolorint==1) // red
-			{
-				redScore();
-			}
-			else if (other.GetComponent<ColorOfPickUp>().mycolorint==2) // blue
-			{
-				blueScore();
-			}
-			else if (other.GetComponent<ColorOfPickUp>().mycolorint==3) // green
-			{
-				greenScore();
-			}
-		}
-		else
-		{
-			count++;
-		}
-
-
-        
+        other.gameObject.SetActive(false);
+        count++;
         setCountText();
     }
 	void setCountText ()
 	{
 		countText.text = "Count: " + count.ToString ();
-	}
-
-	void redScore()
-	{
-		count += 2;
-	}
-
-	void blueScore()
-	{
-		count += 4;
-	}
-
-	void greenScore()
-	{
-		count += 6;
 	}
 }
 

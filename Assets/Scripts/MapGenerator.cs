@@ -17,11 +17,24 @@ public class MapGenerator : MonoBehaviour {
     public int XSize=10;
     public int YSize = 10;
     public int ProbOfChestatstart = 10;
+
+    bool squarebool=false;
+    bool lanscapebool = true;
+
 	void Start ()
     {
       //  GenerateMap(XSize,YSize,ProbOfChestatstart);
 	}
-	
+	public void square()
+    {
+        squarebool = true;
+        lanscapebool = false;
+    }
+    public void landscap()
+    {
+        squarebool = false;
+        lanscapebool = true;
+    }
 	
 	void Update ()
     {
@@ -51,8 +64,17 @@ public class MapGenerator : MonoBehaviour {
                 ThuileInfo TI = Thuile.GetComponent<ThuileInfo>();
                 TI.cooX = x;
                 TI.cooY = y;
-                //TI.Hauteur = Random.Range(0f, 1f); pour thuile
-                TI.Hauteur = Random.Range(0f, 4f);
+                if(squarebool)
+                {
+                    TI.Hauteur = Random.Range(0f, 1f);
+                    TI.multiplicator = 1f;
+                }
+                if(lanscapebool)
+                {
+                    TI.Hauteur = Random.Range(0f, 4f);
+                    TI.multiplicator = 0.25f;
+                }
+                
                 TI.ChestPrefab = ChestPrefab;
                 TI.HasChest = generatingChest(10);
                 TI.pickupPrefab = PickupPrefab;
@@ -65,8 +87,15 @@ public class MapGenerator : MonoBehaviour {
     {
         if(info.cooX==0||info.cooY==0||info.cooX==XSize-1||info.cooY==YSize-1)
         {
-            //info.Hauteur = 2; pour thuile
-            info.Hauteur = 10;
+            if(squarebool)
+            {
+                info.Hauteur = 2;
+            }
+            if(lanscapebool)
+            {
+                info.Hauteur = 10;
+            }
+            
             info.hasPickup = false;
             info.HasChest = false;
         }

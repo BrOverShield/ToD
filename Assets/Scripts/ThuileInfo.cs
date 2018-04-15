@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ThuileInfo : MonoBehaviour {
 
+    public float multiplicator = 1;
     public int cooX=0;
     public int cooY=0;
     public string coo;
@@ -31,13 +32,20 @@ public class ThuileInfo : MonoBehaviour {
         this.transform.localScale = new Vector3(1,Hauteur,1);
         if(HasChest)
         {
-            GameObject Chest = Instantiate(ChestPrefab, new Vector3(cooX, Hauteur*0.25f, cooY),Quaternion.identity);
+            GameObject Chest = Instantiate(ChestPrefab, new Vector3(cooX, Hauteur*multiplicator, cooY),Quaternion.identity);
             
         }
         if(hasPickup)
         {
-            GameObject pickup = Instantiate(pickupPrefab, new Vector3(cooX, Hauteur*0.25f, cooY),Quaternion.identity);
+            GameObject pickup = Instantiate(pickupPrefab, new Vector3(cooX, Hauteur*multiplicator, cooY),Quaternion.identity);
         }
     }
-
+    public void square()
+    {
+        multiplicator = 1;
+    }
+    public void Lanscpae()
+    {
+        multiplicator = 0.25f;
+    }
 }
