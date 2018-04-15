@@ -25,7 +25,7 @@ public class ColorOfPickUp : MonoBehaviour {
         {
             mycolor = PresetGreen;
         }
-        GetComponent<MeshRenderer>().material.color = mycolor;
+        GetComponentInChildren<MeshRenderer>().material.color = mycolor;
 	}
 	
 	// Update is called once per frame

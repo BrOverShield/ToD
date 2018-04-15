@@ -31,11 +31,12 @@ public class ThuileInfo : MonoBehaviour {
         this.transform.localScale = new Vector3(1,Hauteur,1);
         if(HasChest)
         {
-            GameObject Chest = Instantiate(ChestPrefab, new Vector3(cooX, Hauteur, cooY),Quaternion.identity,this.transform);
+            GameObject Chest = Instantiate(ChestPrefab, new Vector3(cooX, Hauteur*0.25f, cooY),Quaternion.identity);
+            
         }
         if(hasPickup)
         {
-            GameObject pickup = Instantiate(pickupPrefab, new Vector3(cooX, Hauteur + 0.5f, cooY),Quaternion.identity,this.transform);
+            GameObject pickup = Instantiate(pickupPrefab, new Vector3(cooX, Hauteur*0.25f, cooY),Quaternion.identity);
         }
     }
 

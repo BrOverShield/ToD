@@ -51,7 +51,8 @@ public class MapGenerator : MonoBehaviour {
                 ThuileInfo TI = Thuile.GetComponent<ThuileInfo>();
                 TI.cooX = x;
                 TI.cooY = y;
-                TI.Hauteur = Random.Range(0f, 1f);
+                //TI.Hauteur = Random.Range(0f, 1f); pour thuile
+                TI.Hauteur = Random.Range(0f, 4f);
                 TI.ChestPrefab = ChestPrefab;
                 TI.HasChest = generatingChest(10);
                 TI.pickupPrefab = PickupPrefab;
@@ -64,7 +65,9 @@ public class MapGenerator : MonoBehaviour {
     {
         if(info.cooX==0||info.cooY==0||info.cooX==XSize-1||info.cooY==YSize-1)
         {
-            info.Hauteur = 2;
+            //info.Hauteur = 2; pour thuile
+            info.Hauteur = 10;
+            info.hasPickup = false;
             info.HasChest = false;
         }
     }
