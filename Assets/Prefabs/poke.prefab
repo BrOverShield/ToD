@@ -277,9 +277,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4692288391048716}
+  - component: {fileID: 65992853326982762}
   m_Layer: 0
   m_Name: poke
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -948,3 +949,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1306666292280802}
   m_Mesh: {fileID: 4300000, guid: 04017ed1634fec845bc5e038a0b7d192, type: 3}
+--- !u!65 &65992853326982762
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1751129021748804}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7, y: 0.1, z: 7}
+  m_Center: {x: 5, y: 6.5, z: 5}
