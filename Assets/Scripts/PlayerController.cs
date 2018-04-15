@@ -10,12 +10,16 @@ public class PlayerController : MonoBehaviour
 	private int count;
 	public Text countText;
     GameObject pickuper;
+	public float impulseForce = 5;
+	private Vector3 impulse;
+
 	// Use this for initialization
 	void Start ()
 	{
 		rb = GetComponent<Rigidbody>();
 		count = 0;
 		setCountText();
+		impulse = new Vector3(0.0f, impulseForce, 0.0f);
 	}
 	
 	// Update is called once per frame
@@ -24,9 +28,17 @@ public class PlayerController : MonoBehaviour
 		float inputHorizontal = Input.GetAxis("Horizontal") * speed;
 		float inputVertical = Input.GetAxis("Vertical") * speed;
 
-		Vector3 movement = new Vector3(inputHorizontal, 0.0f, inputVertical);
+		if(Input.GetKeyDown("space"))
+		{
+			rb.AddForce(impulse, ForceMode.Impulse);
+		}
+		else
+		{
+			Vector3 mouvement = new Vector3(inputHorizontal, 0.0f, inputVertical);
+			rb.AddForce(mouvement);
+		}
 
-		rb.AddForce(movement);
+
         if(Vector3.Distance(this.transform.position,pickuper.transform.position)<=0.2)
         {
             pickuper.SetActive(false);
