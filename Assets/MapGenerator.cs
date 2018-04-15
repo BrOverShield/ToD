@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 
 public class MapGenerator : MonoBehaviour {
+    public Light lighte;
     public GameObject DestroyOnStartClic;
     public Slider sliderx;
     public Slider slidery;
@@ -31,7 +32,7 @@ public class MapGenerator : MonoBehaviour {
     {
 
         GenerateMap(XSize, YSize, ProbOfChestatstart);
-        
+        Instantiate(lighte);
         GameObject P = Instantiate(Player, new Vector3(2, 2, 2), Quaternion.identity);
         Camera.main.GetComponent<camera>().player = P;
         Camera.main.transform.position = new Vector3(2, 7, -1);

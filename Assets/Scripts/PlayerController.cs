@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
 	private Rigidbody rb;
 	private int count;
 	public Text countText;
-
+    GameObject pickuper;
 	// Use this for initialization
 	void Start ()
 	{
@@ -27,18 +27,27 @@ public class PlayerController : MonoBehaviour
 		Vector3 movement = new Vector3(inputHorizontal, 0.0f, inputVertical);
 
 		rb.AddForce(movement);
+        if(Vector3.Distance(this.transform.position,pickuper.transform.position)<=0.2)
+        {
+            pickuper.SetActive(false);
+            count++;
+            setCountText();
+        }
 	}
 
 	void OnTriggerEnter(Collider other)
 	{
 		if (other.gameObject.CompareTag("Pick Up"))
 		{
-			other.gameObject.SetActive(false);
-			count++;
-			setCountText();
+            pickit(other);
 		}
 	}
-
+    void pickit(Collider other)
+    {
+        other.gameObject.SetActive(false);
+        count++;
+        setCountText();
+    }
 	void setCountText ()
 	{
 		//countText.text = "Count: " + count.ToString ();
