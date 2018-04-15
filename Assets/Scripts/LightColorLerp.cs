@@ -24,7 +24,7 @@ public class LightColorLerp : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        GetComponent<Light>().color = Color.Lerp(myColor,color2,speed);
+        GetComponent<Light>().color = Color.Lerp(color1,color2,speed);
         if(speed<=0)
         {
             onetotwo = true;
