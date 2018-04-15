@@ -17,7 +17,7 @@ public class startButton02 : MonoBehaviour {
 	
 	public void changemenuscene()
 	{
-		SceneManager.LoadScene("NextScene");
-		Debug.Log("plz fix me!");
+		SceneManager.LoadScene("FelixLVL1");
+		//Debug.Log("plz fix me!");
 	}
 }
