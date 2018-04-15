@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 
 public class MapGenerator : MonoBehaviour {
+    public Text counttext;
+    public Text pickuptxt;
     public Light lighte;
     public GameObject DestroyOnStartClic;
     public Slider sliderx;
@@ -48,6 +50,8 @@ public class MapGenerator : MonoBehaviour {
         GenerateMap(XSize, YSize, ProbOfChestatstart);
         Instantiate(lighte);
         GameObject P = Instantiate(Player, new Vector3(2, 2, 2), Quaternion.identity);
+        P.GetComponent<PlayerController>().countText = counttext;
+        P.GetComponent<PlayerController>().countPickUp = pickuptxt;
         Camera.main.GetComponent<camera>().player = P;
         Camera.main.transform.position = new Vector3(2, 7, -1);
         Camera.main.GetComponent<camera>().offset = new Vector3(2, 7, -1) - P.transform.position;
@@ -89,7 +93,7 @@ public class MapGenerator : MonoBehaviour {
         {
             if(squarebool)
             {
-                info.Hauteur = 2;
+                info.Hauteur = 10;
             }
             if(lanscapebool)
             {
