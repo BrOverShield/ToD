@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 
 public class MapGenerator : MonoBehaviour {
+    public GameObject mytimer;
+    public Text timertext;
     public Text counttext;
     public Text pickuptxt;
     public Light lighte;
@@ -55,6 +57,8 @@ public class MapGenerator : MonoBehaviour {
         Camera.main.GetComponent<camera>().player = P;
         Camera.main.transform.position = new Vector3(2, 7, -1);
         Camera.main.GetComponent<camera>().offset = new Vector3(2, 7, -1) - P.transform.position;
+        GameObject T = Instantiate(mytimer);
+        T.GetComponent<timer>().timerText = timertext;
         Destroy(DestroyOnStartClic);
         
     }

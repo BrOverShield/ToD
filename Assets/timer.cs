@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class timer : MonoBehaviour
 {
+    bool m1 = true;
 	public float time = 60;
 	public Text timerText;
 	// Use this for initialization
@@ -17,16 +18,24 @@ public class timer : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		time -= Time.deltaTime;
-		updateTimer();
-		if (time <= 0)
-		{
-			SceneManager.LoadScene("Decision01");
-		}
+        if(m1)
+        {
+            time -= Time.deltaTime;
+            updateTimer();
+            if (time <= 0)
+            {
+                SceneManager.LoadScene("Decision01");
+            }
+        }
+		
 	}
 
 	void updateTimer ()
 	{
-		timerText.text = time.ToString ();
+		timerText.text ="Time Left : "+ time.ToString ();
 	}
+    void starttimer()
+    {
+        m1 = true;
+    }
 }
