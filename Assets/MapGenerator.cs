@@ -11,7 +11,7 @@ public class MapGenerator : MonoBehaviour {
     public int ProbOfChest = 10;
 	void Start ()
     {
-        GenerateMap(10,10);
+        GenerateMap(XSize,YSize);
 	}
 	
 	
