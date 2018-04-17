@@ -24,7 +24,7 @@ public class timer : MonoBehaviour
             updateTimer();
             if (time <= 0)
             {
-                SceneManager.LoadScene("Decision01");
+                SceneManager.LoadScene("FelixLVL1");
             }
         }
 		

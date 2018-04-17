@@ -20,4 +20,8 @@ public class reload : MonoBehaviour
         Application.LoadLevel("FelixLVL1");
         
     }
+    public void win()
+    {
+        Application.LoadLevel("WinScene");
+    }
 }
